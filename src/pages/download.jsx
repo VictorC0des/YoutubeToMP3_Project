@@ -1,31 +1,37 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
-import DownloadButton from "../components/download-button";
-import VideoInfo from "../components/video-info";
+import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import DownloadButton from '../components/download-button';
+import VideoInfo from '../components/video-info';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Download() {
-    const [videoUrl, setVideoUrl] = useState('');
+  const [videoUrl, setVideoUrl] = useState('');
 
-    return (
-        <div className="home">
-            <Container fluid className="bg-dark text-white p-5">
-                <Row>
-                    <Col xs={12} md={8} lg={6}>
-                        <h1>Paste the url of the video to convert it to mp3</h1>
-                        <p>
-                            
-                        </p>
-                        <DownloadButton videoUrl={videoUrl} setVideoUrl={setVideoUrl} />
-                    </Col>
-                    <Col xs={12} md={4} lg={6}>
-                        <VideoInfo videoUrl={videoUrl} />
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
+  const downloadStyle = {
+    backgroundColor: '#343a40',
+    color: '#fff',
+    padding: '200px',
+    minHeight: '807px',
+  };
+
+  const headingStyle = {
+    fontSize: '2.5rem',
+    marginBottom: '20px',
+  };
+
+  return (
+    <div className="download" style={downloadStyle}>
+      <Container>
+        <Row className="justify-content-center">
+          <Col xs={12} md={10} lg={8}>
+            <h1 style={headingStyle}>Paste the URL of the video to convert it to MP3</h1>
+            <DownloadButton videoUrl={videoUrl} setVideoUrl={setVideoUrl} />
+            <VideoInfo videoUrl={videoUrl} />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 }
 
 export default Download;
- 
