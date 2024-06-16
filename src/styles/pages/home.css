@@ -1,0 +1,16 @@
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+}
+
+.home .jumbotron {
+    background-color: inherit;
+}
+
+.home .jumbotron .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}

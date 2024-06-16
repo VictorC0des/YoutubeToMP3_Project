@@ -1,0 +1,17 @@
+.header {
+    font-size: 1.0em;
+}
+
+/* Reduce el tamaño de la fuente para pantallas pequeñas */
+@media (max-width: 576px) {
+    .header {
+        font-size: 1em;
+    }
+}
+
+/* Reduce aún más el tamaño de la fuente para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .header {
+        font-size: 0.75em;
+    }
+}
