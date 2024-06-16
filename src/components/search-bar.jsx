@@ -11,7 +11,6 @@ function SearchBar({ videoUrl, setVideoUrl }) {
                 value={videoUrl} 
                 onChange={(e) => setVideoUrl(e.target.value)}
             />
-            <Button variant="outline-dark">Search</Button>
         </Form>
     );
 }
