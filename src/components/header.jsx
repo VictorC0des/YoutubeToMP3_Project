@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import { FaYoutube} from 'react-icons/fa';
 import '../styles/components/header.css'; 
 
 function Header() {
@@ -8,7 +9,7 @@ function Header() {
             <Container>
                 <Navbar className="justify-content-between">
                     <Navbar.Brand as={Link} to="/" className="text-white">
-                        Music Converter
+                    <a href="https://youtube.com" target="_blank" rel="noreferrer"><FaYoutube style={{ color: 'red', width: "100px" }} /></a> Music Converter
                     </Navbar.Brand>
                     <Nav>
                         <Nav.Link as={Link} to="/download" className="text-white">

@@ -30,7 +30,7 @@ function DownloadButton({ videoUrl, setVideoUrl }) {
         }
     };
     return (
-        <div className="container mt-5">
+        <div >
             <SearchBar videoUrl={videoUrl} setVideoUrl={setVideoUrl} />
             <Button onClick={handleDownload} className="mt-2">Download</Button>
         </div>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-
 const VideoInfo = ({ videoUrl }) => {
     const [videoInfo, setVideoInfo] = useState();
     const [error, setError] = useState();

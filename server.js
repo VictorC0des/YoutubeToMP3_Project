@@ -24,9 +24,8 @@ app.get('/api/single/:type', async (req, res) => {
         let info = await ytdl.getInfo(url);
         let format = ytdl.chooseFormat(info.formats, { quality: 'highestaudio' });
         
-        // Use the video title for the file name
+        
         let filename = `${info.videoDetails.title}.mp3`;
-        // Replace any characters in the filename that are not allowed in file names
         filename = filename.replace(/[^a-z0-9\-_\.]/gi, '_');
 
         res.header('Content-Disposition', `attachment; filename="${filename}"`);
